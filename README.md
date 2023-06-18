@@ -1,3 +1,7 @@
+For TMDB API KEYS
+create .env file in root
+key format is TMDB_API="yourkey1.yourkey2"
+
 Server runs at localhost:5000/data
 
 First start server python file in backend
