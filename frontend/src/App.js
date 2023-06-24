@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div class="container">
-        <h1>React and flask</h1>
+        <h1>Latest Movies</h1>
         {/* Calling a data from setdata for showing */}
 
         <MovieCard mov={movie}></MovieCard>

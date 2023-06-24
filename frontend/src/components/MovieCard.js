@@ -29,14 +29,14 @@ export const MovieCard = (props) => {
                                     {/* <p className="card-text">{movie['desc']}</p> */}
                                     {/* <button className="btn btn-primary">Details</button> */}
                                     <Popup
-                                        trigger={<button className="button"> See Details </button>}
+                                        trigger={<button className="ourButton"> See Details </button>}
                                         modal
                                         nested
                                     >
                                         {close => (
-                                            <div >
+                                            <div className="theCardPopup">
                                                 <h1 className="card-title">{movie['title']}</h1>
-                                                <img style={{ width: "35%" }} src={movie['photo']} alt={movie['title']} />
+                                                <img className="ourImg" src={movie['photo']} alt={movie['title']} />
                                                 <div className="content">
                                                     <div> Date : {movie['date']}</div>
                                                     <br />
