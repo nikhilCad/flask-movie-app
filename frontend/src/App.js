@@ -35,13 +35,13 @@ function App() {
       }, [])
 
   return (
-    <div className="App">
-      <div className="App-header">
+    <div class="container">
         <h1>React and flask</h1>
         {/* Calling a data from setdata for showing */}
+
         <MovieCard mov={movie}></MovieCard>
+
       </div>
-    </div>
   );
 
   }
