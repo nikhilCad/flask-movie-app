@@ -6,7 +6,7 @@ import 'reactjs-popup/dist/index.css';
 export const MovieCard = (props) => {
     //console.log(props.mov[0]["title"])
     return (
-        <div class="row">
+        <div className="row">
             {
 
 
@@ -21,19 +21,43 @@ export const MovieCard = (props) => {
                 <div>{movie['date']}</div> */}
 
                         {/* sm adds to 12 in row*/}
-                        <div class="col-sm-4">
-                            <div class="card">
-                                <div class="card-body ">
+                        <div className="col-sm-3 ">
+                            <div className="card">
+                                <div className="card-body ">
                                     <img src={movie['photo']} alt={movie['title']} />
-                                    <h5 class="card-title">{movie['title']}</h5>
-                                    {/* <p class="card-text">{movie['desc']}</p> */}
-                                    {/* <button class="btn btn-primary">Details</button> */}
-                                    <Popup trigger={<button className="button"> Open Modal </button>} modal>
-                                        <div>
+                                    <h5 className="card-title">{movie['title']}</h5>
+                                    {/* <p className="card-text">{movie['desc']}</p> */}
+                                    {/* <button className="btn btn-primary">Details</button> */}
+                                    <Popup
+                                        trigger={<button className="button"> See Details </button>}
+                                        modal
+                                        nested
+                                    >
+                                        {close => (
+                                            <div >
+                                                <h1 className="card-title">{movie['title']}</h1>
+                                                <img style={{ width: "35%" }} src={movie['photo']} alt={movie['title']} />
+                                                <div className="content">
+                                                    <div> Date : {movie['date']}</div>
+                                                    <br />
+                                                    <h2>Plot</h2>
+                                                    <div>{movie['desc']}</div>
+                                                </div>
 
-                                            <h5 class="card-title">{movie['title']}</h5>
-                                            <p class="card-text">{movie['desc']}</p>
-                                        </div>
+                                                <br />
+
+                                                <button
+                                                    className="button"
+                                                    onClick={() => {
+                                                        console.log('modal closed ');
+                                                        close();
+                                                    }}
+                                                >
+                                                    Close
+                                                </button>
+
+                                            </div>
+                                        )}
                                     </Popup>
                                 </div>
                             </div>

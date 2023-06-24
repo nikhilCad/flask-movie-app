@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/data')
 def get_time():
     
-    items = scrape.getTmdbTESTING()
+    items = scrape.getTmdb()
 
     return jsonify(items)
 
