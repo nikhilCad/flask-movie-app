@@ -15,15 +15,7 @@ app = Flask(__name__)
 @app.route('/data')
 def get_time():
     
-    items = scrape.getTmdb()
-
-	# Returning an api for showing in reactjs
-	# return {
-	# 	'Name':"geek",
-	# 	"Age":"22",
-	# 	"Date":x,
-	# 	"programming":"python"
-	# 	}
+    items = scrape.getTmdbTESTING()
 
     return jsonify(items)
 
