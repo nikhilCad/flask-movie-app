@@ -10,7 +10,7 @@ then start react app using npm start
 We added proxy to frontend in package json in frontend
 "proxy":"http://localhost:5000/"
 
-MAKE SURE TO HIDE API KEYS
+Make sure you do not share your tmdb API keys
 
 Use getTmdbTESTING instead of getTmdb while debugging to save api calls
 
